@@ -7,17 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518BA9E91D8C2E380021B60A /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BA9E81D8C2E380021B60A /* CalculatorVC.swift */; };
+		518BA9EB1D8CD6710021B60A /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BA9EA1D8CD6710021B60A /* SettingVC.swift */; };
+		518BA9ED1D8DBF470021B60A /* CustomizeSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BA9EC1D8DBF470021B60A /* CustomizeSegment.swift */; };
+		518BA9F21D8E045E0021B60A /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 518BA9F11D8E045E0021B60A /* Settings-50.png */; };
+		518BA9F41D8E05500021B60A /* Settings Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 518BA9F31D8E05500021B60A /* Settings Filled-50.png */; };
+		518BA9F91D8E0C550021B60A /* Conference Call Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 518BA9F51D8E0C550021B60A /* Conference Call Filled-50.png */; };
+		518BA9FA1D8E0C550021B60A /* Conference Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 518BA9F61D8E0C550021B60A /* Conference Filled-50.png */; };
+		518BA9FB1D8E0C550021B60A /* Contacts Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 518BA9F71D8E0C550021B60A /* Contacts Filled-50.png */; };
+		518BA9FC1D8E0C550021B60A /* User Group Man Man Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 518BA9F81D8E0C550021B60A /* User Group Man Man Filled-50.png */; };
+		518BA9FE1D8E25340021B60A /* CustomizeAmountTB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518BA9FD1D8E25340021B60A /* CustomizeAmountTB.swift */; };
 		518DF4AA1D8C229D00B009A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518DF4A91D8C229D00B009A5 /* AppDelegate.swift */; };
-		518DF4AC1D8C229D00B009A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518DF4AB1D8C229D00B009A5 /* ViewController.swift */; };
 		518DF4AF1D8C229D00B009A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518DF4AD1D8C229D00B009A5 /* Main.storyboard */; };
 		518DF4B11D8C229D00B009A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518DF4B01D8C229D00B009A5 /* Assets.xcassets */; };
 		518DF4B41D8C229D00B009A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518DF4B21D8C229D00B009A5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		518BA9E81D8C2E380021B60A /* CalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
+		518BA9EA1D8CD6710021B60A /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		518BA9EC1D8DBF470021B60A /* CustomizeSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeSegment.swift; sourceTree = "<group>"; };
+		518BA9F11D8E045E0021B60A /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-50.png"; sourceTree = "<group>"; };
+		518BA9F31D8E05500021B60A /* Settings Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings Filled-50.png"; sourceTree = "<group>"; };
+		518BA9F51D8E0C550021B60A /* Conference Call Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Call Filled-50.png"; sourceTree = "<group>"; };
+		518BA9F61D8E0C550021B60A /* Conference Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conference Filled-50.png"; sourceTree = "<group>"; };
+		518BA9F71D8E0C550021B60A /* Contacts Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts Filled-50.png"; sourceTree = "<group>"; };
+		518BA9F81D8E0C550021B60A /* User Group Man Man Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Group Man Man Filled-50.png"; sourceTree = "<group>"; };
+		518BA9FD1D8E25340021B60A /* CustomizeAmountTB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizeAmountTB.swift; sourceTree = "<group>"; };
 		518DF4A61D8C229D00B009A5 /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518DF4A91D8C229D00B009A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		518DF4AB1D8C229D00B009A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		518DF4AE1D8C229D00B009A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		518DF4B01D8C229D00B009A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		518DF4B31D8C229D00B009A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +53,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		518BA9E61D8C2DCD0021B60A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				518BA9EC1D8DBF470021B60A /* CustomizeSegment.swift */,
+				518BA9FD1D8E25340021B60A /* CustomizeAmountTB.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		518BA9E71D8C2DD60021B60A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				518BA9E81D8C2E380021B60A /* CalculatorVC.swift */,
+				518BA9EA1D8CD6710021B60A /* SettingVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		518BA9EE1D8E03150021B60A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				518BA9F51D8E0C550021B60A /* Conference Call Filled-50.png */,
+				518BA9F61D8E0C550021B60A /* Conference Filled-50.png */,
+				518BA9F71D8E0C550021B60A /* Contacts Filled-50.png */,
+				518BA9F81D8E0C550021B60A /* User Group Man Man Filled-50.png */,
+				518BA9F31D8E05500021B60A /* Settings Filled-50.png */,
+				518BA9F11D8E045E0021B60A /* Settings-50.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		518DF49D1D8C229D00B009A5 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +103,10 @@
 		518DF4A81D8C229D00B009A5 /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				518BA9EE1D8E03150021B60A /* Image */,
+				518BA9E71D8C2DD60021B60A /* Controller */,
+				518BA9E61D8C2DCD0021B60A /* View */,
 				518DF4A91D8C229D00B009A5 /* AppDelegate.swift */,
-				518DF4AB1D8C229D00B009A5 /* ViewController.swift */,
 				518DF4AD1D8C229D00B009A5 /* Main.storyboard */,
 				518DF4B01D8C229D00B009A5 /* Assets.xcassets */,
 				518DF4B21D8C229D00B009A5 /* LaunchScreen.storyboard */,
@@ -96,7 +147,7 @@
 				TargetAttributes = {
 					518DF4A51D8C229D00B009A5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 87J5Y4US98;
+						DevelopmentTeam = Q5299J7Y59;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,9 +175,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518BA9FA1D8E0C550021B60A /* Conference Filled-50.png in Resources */,
 				518DF4B41D8C229D00B009A5 /* LaunchScreen.storyboard in Resources */,
+				518BA9FB1D8E0C550021B60A /* Contacts Filled-50.png in Resources */,
+				518BA9F21D8E045E0021B60A /* Settings-50.png in Resources */,
 				518DF4B11D8C229D00B009A5 /* Assets.xcassets in Resources */,
+				518BA9FC1D8E0C550021B60A /* User Group Man Man Filled-50.png in Resources */,
 				518DF4AF1D8C229D00B009A5 /* Main.storyboard in Resources */,
+				518BA9F91D8E0C550021B60A /* Conference Call Filled-50.png in Resources */,
+				518BA9F41D8E05500021B60A /* Settings Filled-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				518DF4AC1D8C229D00B009A5 /* ViewController.swift in Sources */,
 				518DF4AA1D8C229D00B009A5 /* AppDelegate.swift in Sources */,
+				518BA9EB1D8CD6710021B60A /* SettingVC.swift in Sources */,
+				518BA9E91D8C2E380021B60A /* CalculatorVC.swift in Sources */,
+				518BA9ED1D8DBF470021B60A /* CustomizeSegment.swift in Sources */,
+				518BA9FE1D8E25340021B60A /* CustomizeAmountTB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +321,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 87J5Y4US98;
+				DEVELOPMENT_TEAM = Q5299J7Y59;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manor.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -274,12 +336,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 87J5Y4US98;
+				DEVELOPMENT_TEAM = Q5299J7Y59;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manor.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -302,6 +366,7 @@
 				518DF4BA1D8C229D00B009A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
