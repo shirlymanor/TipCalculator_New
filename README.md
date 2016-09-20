@@ -19,6 +19,9 @@ Describe any challenges encountered while building the app: <br>
 Swift 3 just came out with some syntax change. <br>
 Try to create customized segment and its was hard and took some time.
 
+## Updates
+Add animation 
+Update textbox as a first responser.
 
 ## License
 
