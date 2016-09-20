@@ -26,7 +26,7 @@ class CalculatorVC: UIViewController {
         // Declare global varibles that can be change in the setting page
         tipSegment.selectedSegmentIndex = defaults.integer(forKey: "default_tip_index")
         groupSegment.selectedSegmentIndex = defaults.integer(forKey: "default_group_number")
-        
+        amount.becomeFirstResponder()
         setTip()
     }
     
