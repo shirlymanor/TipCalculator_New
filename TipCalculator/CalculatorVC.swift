@@ -23,6 +23,7 @@ class CalculatorVC: UIViewController {
     @IBOutlet weak var firstView: UIView!
     
     @IBOutlet weak var secondView: UIView!
+    
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         // Declare global varibles that can be change in the setting page
@@ -31,7 +32,7 @@ class CalculatorVC: UIViewController {
         amount.becomeFirstResponder()
         setAnimation()
         setTip()
-
+        
     }
     
     @IBAction func editChange(_ sender: AnyObject) {
@@ -72,8 +73,9 @@ class CalculatorVC: UIViewController {
                 
             }
             else {
-                tip.text = "\(tipText) $"
-                group.text = "\(tipText / Float(selectedGroupNumber)) $"
+                tip.text = "\(tipText.asLocaleCurrency) "
+                let tipPerPerson: Float = tipText / Float(selectedGroupNumber)
+                group.text = "\(tipPerPerson.asLocaleCurrency) "
             }
             
             return
@@ -86,9 +88,17 @@ class CalculatorVC: UIViewController {
         self.secondView.alpha = 2
         print(view.bounds.width)
         UIView.animate(withDuration: 0.4, animations: {
-            self.amount.center.x += self.view.bounds.width
-           // self.firstView.alpha = 1
             self.secondView.alpha = 0
-        },completion: nil)
+            },completion: nil)
+    }
+    
+}
+// Add extension to float to get the currency from the setting (region)
+extension Float {
+    var asLocaleCurrency:String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        return formatter.string(from: NSNumber(value: self))!
     }
 }
