@@ -59,6 +59,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hr1-O5-S18">
+                                <frame key="frameInset" minX="3" minY="568" width="365" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l91-Ou-IIX">
                                 <frame key="frameInset" minX="96" minY="291" width="179" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -131,8 +136,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="amount" destination="P1y-oU-BSB" id="7vo-H3-BEr"/>
+                        <outlet property="firstView" destination="fzP-IL-WB1" id="Plz-Fp-OOO"/>
                         <outlet property="group" destination="rwS-La-hFJ" id="5Ev-pf-9T7"/>
                         <outlet property="groupSegment" destination="Kei-78-6S4" id="EzZ-X0-00W"/>
+                        <outlet property="secondView" destination="Hr1-O5-S18" id="bYm-Nh-17s"/>
                         <outlet property="tip" destination="5sI-N1-aQc" id="doe-Gn-NG6"/>
                         <outlet property="tipSegment" destination="l91-Ou-IIX" id="dyu-pS-uIE"/>
                     </connections>

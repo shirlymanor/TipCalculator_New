@@ -20,14 +20,18 @@ class CalculatorVC: UIViewController {
     
     @IBOutlet weak var groupSegment: UISegmentedControl!
     
+    @IBOutlet weak var firstView: UIView!
     
+    @IBOutlet weak var secondView: UIView!
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         // Declare global varibles that can be change in the setting page
         tipSegment.selectedSegmentIndex = defaults.integer(forKey: "default_tip_index")
         groupSegment.selectedSegmentIndex = defaults.integer(forKey: "default_group_number")
         amount.becomeFirstResponder()
+        setAnimation()
         setTip()
+
     }
     
     @IBAction func editChange(_ sender: AnyObject) {
@@ -39,7 +43,7 @@ class CalculatorVC: UIViewController {
     }
     
     @IBAction func tipChanged(_ sender: AnyObject) {
-        
+        setAnimation()
         setTip()
     }
     
@@ -75,5 +79,16 @@ class CalculatorVC: UIViewController {
             return
         }
         
+    }
+    func setAnimation()
+    {
+        self.firstView.alpha = 0
+        self.secondView.alpha = 2
+        print(view.bounds.width)
+        UIView.animate(withDuration: 0.4, animations: {
+            self.amount.center.x += self.view.bounds.width
+           // self.firstView.alpha = 1
+            self.secondView.alpha = 0
+        },completion: nil)
     }
 }
