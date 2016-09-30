@@ -1,28 +1,44 @@
-# Tip Calculator<br>
+# Pre-work - *Tip Calculator*
 
-Create an app to calculate the tip.<br>
-## Submission Checklist:<br>
-![alt tag](https://github.com/shirlymanor/TipCalculator_New/blob/master/TipCalculator/hands.png)Implement both the TipViewController and the SettingsViewController. <br>
-![alt tag](https://github.com/shirlymanor/TipCalculator_New/blob/master/TipCalculator/hands.png)Successfully push your code to github - Can see the code. <br>
-![alt tag](https://github.com/shirlymanor/TipCalculator_New/blob/master/TipCalculator/hands.png)Add a README.md to the repo on github which includes a GIF walkthrough:
-![alt tag](https://github.com/shirlymanor/TipCalculator_New/blob/master/TipCalculator/Tip.gif)
+**Tip Calculator** is a tip calculator application for iOS.
 
-## More Features: <br>
-Check if it's cent or dollars. <br>
-Create custom view controller for the tip caculator and the setting.<br>
-Create custom segment for tip per person.<br>
-Add custom setting button.<br>
+Submitted by: **Shirly Manor**
+
+Time spent: **6** hours spent in total
+
+## User Stories
+
+The following **required** functionality is complete:
+
+* [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [x] Settings page to change the default tip percentage.
+
+The following **optional** features are implemented:
+* [x] UI animations
+* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [x] Using locale-specific currency and currency thousands separators.
+* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+
+The following **additional** features are implemented:
+
+* [x] Check if it is cent or dollars.
+* [x] Create custom segment for tip per person.<br>
+* [X] Add custom setting button.<br>
+* [X] Add extension to float to get local currency<br>
+
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://github.com/shirlymanor/TipCalculator_New/blob/master/TipCalculator/Tip.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app: <br>
+Describe any challenges encountered while building the app:
 Swift 3 just came out with some syntax change. <br>
 Try to create customized segment and its was hard and took some time.
-
-## Updates
-Add animation <br>
-Update textbox as a first responser. <br>
-Add extension to float to get local currency<br>
 
 ## License
 
