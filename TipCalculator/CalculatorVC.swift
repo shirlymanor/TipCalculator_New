@@ -24,20 +24,29 @@ class CalculatorVC: UIViewController {
     
     @IBOutlet weak var secondView: UIView!
     
+    var updateAmountDate: Double?
+    
     override func viewWillAppear(_ animated: Bool) {
-        let defaults = UserDefaults.standard
-        // Declare global varibles that can be change in the setting page
-        tipSegment.selectedSegmentIndex = defaults.integer(forKey: "default_tip_index")
-        groupSegment.selectedSegmentIndex = defaults.integer(forKey: "default_group_number")
+        
         amount.becomeFirstResponder()
+        setGlobalparam()
+        getGlobalparam()
         setAnimation()
         setTip()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setGlobalparam()
+        getGlobalparam()
         
     }
     
     @IBAction func editChange(_ sender: AnyObject) {
         guard amount.text == "" else {
             setTip()
+            updateAmountDate = 600
             return
         }
         
@@ -59,7 +68,7 @@ class CalculatorVC: UIViewController {
     
     func setTip()
     {
-        guard (Int(amount.text!)!<0) else {
+          guard (Int(amount.text!)!<0) else {
             let tipPercentages = [0.1,0.15,0.18,0.2]
             let amountPeople = [1,2,3,4]
             let selectedTipPercentage = Float(tipPercentages[tipSegment.selectedSegmentIndex])
@@ -67,9 +76,9 @@ class CalculatorVC: UIViewController {
             var tipText =  Float(amount.text!)! * selectedTipPercentage
             
             if(tipText < 1 && tipText > 0) {
-                tipText = tipText * 100 //change to cents
+                tipText    = tipText * 100 //change to cents
                 group.text = "\(tipText / Float(selectedGroupNumber)) Cents"
-                tip.text = "\(tipText) Cents"
+                tip.text   = "\(tipText) Cents"
                 
             }
             else {
@@ -82,14 +91,38 @@ class CalculatorVC: UIViewController {
         }
         
     }
-    func setAnimation()
-    {
-        self.firstView.alpha = 0
+    
+    func setAnimation() {
+        
+        self.firstView.alpha  = 0
         self.secondView.alpha = 2
         print(view.bounds.width)
         UIView.animate(withDuration: 0.4, animations: {
             self.secondView.alpha = 0
             },completion: nil)
+        
+    }
+    
+    func getGlobalparam() {
+        
+        let defaults = UserDefaults.standard
+        print(defaults.integer(forKey: "default_tip_index"))
+        // Declare global varibles that can be change in the setting page
+        tipSegment.selectedSegmentIndex   = defaults.integer(forKey: "default_tip_index")
+        groupSegment.selectedSegmentIndex = defaults.integer(forKey: "default_group_number")
+        updateAmountDate                  = defaults.double(forKey: "update_amount_date")
+        amount.text                       = defaults.string(forKey: "last_amount")
+        
+    }
+    
+    func setGlobalparam() {
+        let defaults = UserDefaults.standard
+        
+        //Save the last bill amount
+        defaults.set(amount!.text, forKey:"last_amount")
+        defaults.set(NSDate().timeIntervalSince1970,forKey: "update_amount_date")
+        defaults.synchronize()
+
     }
     
 }
