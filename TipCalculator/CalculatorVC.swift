@@ -59,6 +59,7 @@ class CalculatorVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() // Add extention to hide the keyboard when tapping in diffrent location
         setTip()
     }
     
@@ -96,7 +97,6 @@ class CalculatorVC: UIViewController {
         
         self.firstView.alpha  = 0
         self.secondView.alpha = 2
-        print(view.bounds.width)
         UIView.animate(withDuration: 0.4, animations: {
             self.secondView.alpha = 0
             },completion: nil)
@@ -105,9 +105,7 @@ class CalculatorVC: UIViewController {
     
     func getGlobalparam() {
         
-        let defaults = UserDefaults.standard
-        print(defaults.integer(forKey: "default_tip_index"))
-        // Declare global varibles that can be change in the setting page
+        let defaults = UserDefaults.standard  // Declare global varibles that can be change in the setting page
         tipSegment.selectedSegmentIndex   = defaults.integer(forKey: "default_tip_index")
         groupSegment.selectedSegmentIndex = defaults.integer(forKey: "default_group_number")
         updateAmountDate                  = defaults.double(forKey: "update_amount_date")
@@ -133,5 +131,17 @@ extension Float {
         formatter.numberStyle = .currency
         formatter.locale = NSLocale.current
         return formatter.string(from: NSNumber(value: self))!
+    }
+}
+
+// Add extension to hide keyboard when touching the screen
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
