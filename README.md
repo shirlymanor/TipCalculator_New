@@ -15,9 +15,9 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [x] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [1/2] Remembering the bill amount across app restarts (if <10mins)
 * [x] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
@@ -25,6 +25,8 @@ The following **additional** features are implemented:
 * [x] Create custom segment for tip per person.<br>
 * [X] Add custom setting button.<br>
 * [X] Add extension to float to get local currency<br>
+* [X] Add extension to hide the keyboard if tapping anyplace on the view controller.
+* [X] Create simple icon with scatch and add it to my app.
 
 ## Video Walkthrough 
 
