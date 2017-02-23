@@ -16,6 +16,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var defaultGroupNumber: UISegmentedControl!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
     }
