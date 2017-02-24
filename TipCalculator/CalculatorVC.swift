@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorVC: UIViewController {
+class CalculatorVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tip: UILabel!
     
@@ -44,7 +44,7 @@ class CalculatorVC: UIViewController {
     }
     
     @IBAction func editChange(_ sender: AnyObject) {
-        guard amount.text == "" else {
+        guard (!amount.hasText)  else {
             setTip()
             updateAmountDate = 600
             return
@@ -60,16 +60,47 @@ class CalculatorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround() // Add extention to hide the keyboard when tapping in diffrent location
+        amount.delegate = self
+        amount.keyboardType = UIKeyboardType.numbersAndPunctuation
         setTip()
-    }
+        }
     
     @IBAction func onGroupChange(_ sender: AnyObject) {
         setTip()
     }
+   
+    func textField(_ textField: UITextField,
+                       shouldChangeCharactersIn range: NSRange,
+                       replacementString string: String)
+            -> Bool
+        {
+            // We still return true to allow the change to take place.
+            if string.characters.count == 0 {
+                clearTip()
+                return true
+            }
+            
+            let currentText = textField.text ?? ""
+            let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            
+            switch textField {
+                
+            case amount:
+                return prospectiveText.isNumeric() &&
+                    prospectiveText.characters.count <= 7
+                
+              
+            default:
+                return true
+            }
+            
+        }
+        
+    
     
     func setTip()
     {
-          guard (Int(amount.text!)!<0) else {
+        guard (!amount.hasText) else {
             let tipPercentages = [0.1,0.15,0.18,0.2]
             let amountPeople = [1,2,3,4]
             let selectedTipPercentage = Float(tipPercentages[tipSegment.selectedSegmentIndex])
@@ -92,7 +123,11 @@ class CalculatorVC: UIViewController {
         }
         
     }
-    
+    func clearTip()
+    {
+        tip.text = ""
+        group.text = ""
+    }
     func setAnimation() {
         
         self.firstView.alpha  = 0
@@ -144,4 +179,14 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+// add extension to check if a string is number
+extension String {
+    func isNumeric() -> Bool
+    {
+        let scanner = Scanner(string: self)
+        scanner.locale = Locale.current
+        return scanner.scanDecimal(nil) && scanner.isAtEnd
+    }
+
 }
