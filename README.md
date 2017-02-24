@@ -41,7 +41,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 Describe any challenges encountered while building the app:
 Swift 3 just came out with some syntax change. <br>
 Try to create customized segment and its was hard and took some time.
-
+2/24/2017 - * Found a bug- crush when I add punctuation * now Tip amount can be only number and punctuation. Also limit the amount to 7 characters (add global variable that I can change in the future.
 ## License
 
     Copyright @ [Shirly Manor]
