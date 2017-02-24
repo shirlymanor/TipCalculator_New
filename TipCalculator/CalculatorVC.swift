@@ -26,6 +26,8 @@ class CalculatorVC: UIViewController, UITextFieldDelegate {
     
     var updateAmountDate: Double?
     
+    let limitCharactersFotAmount: Int = 7
+    
     override func viewWillAppear(_ animated: Bool) {
         
         amount.becomeFirstResponder()
@@ -87,7 +89,7 @@ class CalculatorVC: UIViewController, UITextFieldDelegate {
                 
             case amount:
                 return prospectiveText.isNumeric() &&
-                    prospectiveText.characters.count <= 7
+                    prospectiveText.characters.count <= limitCharactersFotAmount
                 
               
             default:
